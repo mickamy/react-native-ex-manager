@@ -10,7 +10,12 @@ import { Card, CardSection, Input, Button, Spinner } from './common';
 
 class LoginForm extends Component {
   onButtonPress() {
-    const { email, password } = this.props;
+    let { email, password } = this.props;
+    if (email === '' && password === '') {
+      email = 'test@example.com';
+      password = 'password';
+    }
+
     this.props.loginUser({ email, password });
   }
 
