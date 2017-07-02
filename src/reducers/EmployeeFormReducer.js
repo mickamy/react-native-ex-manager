@@ -13,7 +13,7 @@ export default (state = INITIAL_STATE, action) => {
     case UPDATE_EMPLOYEE: {
       const { prop, value } = action.payload;
       return { ...state,
-        [prop]: value
+        [prop]: value,
       };
     }
     default:
